@@ -1,0 +1,248 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  height: 100vh;
+}
+header {
+  background-color: rgb(68, 95, 172);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  color: #fff;
+  overflow-x: auto;
+}
+.facebook-logo {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  font-size: 2.4rem;
+  font-weight: 700;
+  flex-basis: 32%;
+}
+
+.logins {
+  display: flex;
+  flex-basis: 41%;
+  gap: 1rem;
+  justify-content: center;
+  margin-right: 4rem;
+}
+.logins .login-details:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+.login-details p {
+  margin-bottom: 0.3rem;
+  font-weight: 540;
+}
+.login-details input {
+  padding: 0.3rem;
+  outline: none;
+}
+.login-details:nth-child(2) span a {
+  opacity: 0.6;
+  color: #fff;
+  text-decoration: none;
+}
+.login-details:nth-child(2) span:hover {
+  transform: translateY(4px);
+  transition: 0.5s ease-out;
+}
+.login-details:nth-child(2) span a:hover {
+  opacity: 0.8;
+  color: #fff;
+  text-decoration: underline;
+}
+.login-btn {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  height: fit-content;
+  align-self: center;
+  padding: 0.2rem;
+  border-radius: 0.4rem;
+  font-weight: 560;
+  box-shadow: 2px 2px 6px 2px rgb(39, 49, 76);
+  cursor: pointer;
+}
+.login-btn:hover {
+  background-color: rgb(100, 124, 188);
+  color: #fff;
+  border: none;
+  transform: scale(1.1);
+  transition: 0.5s ease-out;
+}
+/* Content */
+article {
+  display: flex;
+  padding: 2rem 0;
+  justify-content: space-around;
+  background: linear-gradient(white, rgb(234, 241, 241), rgb(225, 236, 236));
+}
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-basis: 42%;
+  overflow: hidden;
+  padding: 0 2.6rem;
+}
+.col-1 p {
+  max-width: 65%;
+  position: relative;
+  top: 1rem;
+  font-weight: 600;
+  z-index: 1;
+  color: rgb(104, 104, 158);
+}
+.col-1 img {
+  width: 60%;
+  position: relative;
+  top: 2.5rem;
+  left: 1rem;
+}
+.col-2 {
+  flex-basis: 40%;
+  height: 74vh;
+  color: rgb(103, 103, 118);
+}
+.col-2 h1 {
+  margin-bottom: 0.4rem;
+  font-size: 2rem;
+  color: rgb(64, 64, 71);
+}
+.col-2 p {
+  font-weight: 600;
+}
+.col-2 form {
+  padding: 0.6rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.col-2 form .user-name {
+  display: flex;
+  /* justify-content: space-between; */
+  width: 87%;
+  gap: 1rem;
+}
+input {
+  outline: none;
+}
+.col-2 input {
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+  width: 87%;
+}
+input::placeholder {
+  font-size: 11px;
+  opacity: 0.7;
+}
+.email,
+.password {
+  width: 100%;
+}
+p {
+  font-size: 14px;
+}
+.birth-date {
+  width: fit-content;
+  margin-top: 1rem;
+}
+.birth-date h2 {
+  margin-bottom: 0.4rem;
+  font-size: 14px;
+  font-weight: 600;
+}
+.birth-date select {
+  box-shadow: 1px 1px 4px 0px gray;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  outline: none;
+  color: #bdbdbd;
+}
+.birth-date span,
+.gender span {
+  background-color: #8d8c8c;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.2rem 0.4rem;
+  margin-left: 0.4rem;
+  align-self: center;
+  font-size: 0.7rem;
+}
+.gender {
+  margin-top: 1rem;
+}
+.gender h2 {
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+.gender-list {
+  margin: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gender-list label {
+  position: relative;
+  right: 1rem;
+  margin-left: 1rem;
+  font-weight: 550;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.gender-list label input {
+  margin-top: 0.2rem;
+}
+.gender-list span {
+  position: relative;
+  right: 1rem;
+  top: -0.11rem;
+  align-items: center;
+}
+
+form p {
+  line-height: 1.2rem;
+  font-size: 12px;
+  max-width: 67%;
+}
+form p a {
+  color: blue;
+}
+.signUp-btn {
+  background: linear-gradient(
+    rgb(146, 240, 146),
+    rgb(104, 199, 104),
+    rgb(56, 141, 56)
+  );
+  text-shadow: 3px 3px 3px rgba(9, 16, 9, 0.824);
+
+  width: fit-content;
+  padding: 0.5rem 3em;
+  margin-top: 1rem;
+  border-radius: 0.4rem;
+  border: none;
+  color: #fff;
+}
+.signUp-btn a {
+  color: #fff;
+  font-weight: 800;
+}
+.signUp-btn:hover {
+  background: linear-gradient(
+    rgba(146, 240, 146, 0.844),
+    rgba(104, 199, 104, 0.822),
+    rgba(56, 141, 56, 0.824)
+  );
+}
+a {
+  text-decoration: none;
+}
