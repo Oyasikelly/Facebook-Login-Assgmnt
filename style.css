@@ -8,14 +8,20 @@ body {
   margin: 0;
   font-family: sans-serif;
   height: 100vh;
+  width: 100%;
 }
 header {
   background-color: rgb(68, 95, 172);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   padding: 1rem 2rem;
   color: #fff;
   overflow-x: auto;
+  width: 100%;
+}
+header .row-1 {
+  display: flex;
+  justify-content: space-between;
 }
 .facebook-logo {
   display: flex;
@@ -31,6 +37,7 @@ header {
   flex-basis: 41%;
   gap: 1rem;
   justify-content: center;
+  align-items: center;
   margin-right: 4rem;
 }
 .logins .login-details:nth-child(2) {
@@ -45,27 +52,14 @@ header {
   padding: 0.3rem;
   outline: none;
 }
-.login-details:nth-child(2) span a {
-  opacity: 0.6;
-  color: #fff;
-  text-decoration: none;
-}
-.login-details:nth-child(2) span:hover {
-  transform: translateY(4px);
-  transition: 0.5s ease-out;
-}
-.login-details:nth-child(2) span a:hover {
-  opacity: 0.8;
-  color: #fff;
-  text-decoration: underline;
-}
+
 .login-btn {
   background-color: transparent;
   color: #fff;
   border: none;
   height: fit-content;
-  align-self: center;
-  padding: 0.2rem;
+  align-self: flex-end;
+  padding: 0.4rem;
   border-radius: 0.4rem;
   font-weight: 560;
   box-shadow: 2px 2px 6px 2px rgb(39, 49, 76);
@@ -78,12 +72,31 @@ header {
   transform: scale(1.1);
   transition: 0.5s ease-out;
 }
+header span {
+  align-self: flex-end;
+  position: relative;
+  top: 0.5rem;
+  right: 13rem;
+}
+.forget-link {
+  color: #ffffffb6;
+}
+header span:hover {
+  transform: translateY(4px);
+  transition: 0.5s ease-out;
+}
+.forget-link:hover {
+  color: #ffffffde;
+  text-decoration: underline;
+}
 /* Content */
 article {
   display: flex;
   padding: 2rem 0;
   justify-content: space-around;
   background: linear-gradient(white, rgb(234, 241, 241), rgb(225, 236, 236));
+  height: 90vh;
+  width: 100%;
 }
 .col-1 {
   display: flex;
@@ -127,7 +140,6 @@ article {
 }
 .col-2 form .user-name {
   display: flex;
-  /* justify-content: space-between; */
   width: 87%;
   gap: 1rem;
 }
@@ -245,4 +257,77 @@ form p a {
 }
 a {
   text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    flex-direction: column;
+    overflow-x: visible;
+    height: 40vh;
+    justify-content: center;
+  }
+  .facebook-logo {
+    align-self: center;
+    flex-basis: 0;
+  }
+  .row-1 {
+    flex-direction: column;
+  }
+  .logins {
+    align-self: center;
+    margin-right: 0;
+    flex-direction: column;
+    gap: 0;
+    flex-basis: 0;
+    margin-top: 2rem;
+  }
+  .login-btn {
+    margin-top: 0.5rem;
+  }
+  header span {
+    align-self: center;
+    position: relative;
+    top: 2rem;
+    right: 1.5rem;
+  }
+  article {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .col-1 {
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .col-1 p {
+    max-width: 100%;
+  }
+
+  .col-2 .head-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+    position: relative;
+    top: -2rem;
+  }
+  .head-child h1 {
+    margin-top: 1rem;
+  }
+  .col-2 form {
+    align-items: center;
+    padding: 0 2rem;
+  }
+  .col-2 .form-container {
+    width: 98%;
+    align-items: center;
+  }
+
+  .col-2 input {
+    margin-bottom: 0.5rem;
+    padding: 0.3rem;
+    width: 100%;
+  }
+  .col-2 form .user-name {
+    width: 100%;
+  }
 }
