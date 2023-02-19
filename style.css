@@ -349,6 +349,10 @@ a {
   .gender-list span {
     margin-left: 0rem;
   }
+  .select-gender {
+    margin: 0;
+    padding: 0;
+  }
   .form-container p {
     max-width: 100%;
     margin-top: 0.5rem;
