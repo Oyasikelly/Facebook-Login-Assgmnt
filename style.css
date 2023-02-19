@@ -338,11 +338,14 @@ a {
     display: flex;
     flex-direction: row;
   }
+  .select-gender {
+    width: 100%;
+  }
   .gender-list {
     margin: 0;
     gap: 0;
-    display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .gender-list label {
     right: 0rem;
