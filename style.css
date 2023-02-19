@@ -340,6 +340,7 @@ a {
   }
   .gender-list {
     margin: 0;
+    gap: 0;
   }
   .gender-list label {
     right: 0rem;
@@ -349,10 +350,12 @@ a {
   .gender-list span {
     margin-left: 0rem;
   }
-  .select-gender {
+  /* .select-gender {
+    display: flex;
+    justify-content: baseline;
     margin: 0;
     padding: 0;
-  }
+  } */
   .form-container p {
     max-width: 100%;
     margin-top: 0.5rem;
